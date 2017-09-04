@@ -3,22 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>nerd's</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
 		<div class="container">
 			<a class="logo" href="#">
-				<img src="img/nerds-logo.svg" alt="logo" width="160px" height="65px" class="logo">
+				<img src="img/nerds-logo.png" alt="logo" width="160px" height="65px" class="logo">
 			</a>
 			<nav class="main-navigation">
 				<ul>
-					<li><a href="#" class="Studio">Студия</a></li>
-					<li class="Customers"><a href="#">Клиенты</a></li>
+					<li><a href="index.html" class="studio">Студия</a></li>
+					<li class="customers"><a href="#">Клиенты</a></li>
 					<li class="shop"><a href="#">Магазин</a></li>
 					<li class="contacts"><a href="#">Контакты</a></li>
 					<li><a href="#" class="basket">Корзина</a></li>
-					<img src="img/cart-icon.jpg" alt="icon" class="icon">
+					<img src="img/cart-icon.png" alt="icon" class="icon">
 				</ul>
 			</nav>
 		</div>
@@ -27,13 +28,13 @@
 		</div>
 		</header>
 	<main>
-		<form>
-			<div class="form1">
-			<div class="filter1">
-				<input type="range" min="0" max="25000" step="1" value="15000"><br>от
-				<input type="text" value="0">до
-				<input type="text" value="15000">
-					<h2>Сетка:</h2>
+		<div class="container">
+			<form>
+				<div class="filter">
+					<input type="range" min="0" max="25000" step="1" value="15000"><br>от
+					<input type="text" value="0">до
+					<input type="text" value="15000">
+						<h2>Сетка:</h2>
 					<label>
 						<input type="radio" id="rd1" checked>
 						Адаптивная
@@ -43,11 +44,13 @@
 						Фиксированная
 					</label>
 					<label>
+						<input type="radio" id="rd3">
 						Резиновая
 					</label>
 				</div>
-					<div class="filter2">
+					<div class="form-group">
 						<h2>Особенности:</h2>
+						<div class="wrap"></div>
 						<label>
 							<input type="checkbox" name="Слайдер" id="ch1" checked>
 							Слайдер
@@ -70,42 +73,90 @@
 						</label>
 						<button class="btn" type="submit">Показать</button>
 					</div>
-					<div class="sort">
-						<h3>Сортировать:</h3>
-						<p>по цене</p>
-						<p>по типу</p>
-						<p>по названию</p>
-					</div>
+					
 			</div>
 		</form>
-		<div class="catalog">
+		<div class="catalog-filter">
+			<div class="container">
 		<!--Начинаются перечисление товаров-->
-			<div class="catalog-item">
-				<img src="img/img-sedona.jpg" alt="Sedona">
+			<div class="sort">
+				<h3>Сортировать:</h3>
+				<button>по цене</button>
+				<button>по типу</button>
+				<button>по названию</button>
+				<button>▲</button>
+				<button>▼</button>
+			</div>
+			<div class="catalog-items">
+				<div class="catalog-item">
+					<div class="title">
+						<div class="title-btn"></div>
+						<div class="title-btn"></div>
+						<div class="title-btn"></div>
+					</div>
+				</div>
+				<div class="body">
+					<img src="img/img-sedona.jpg" alt="Sedona">
+				<div class="desc">
 				<h3>Sedona</h3>
 				<p>Информационный сайт для туристов</p>
-				<button type="submit">9 900 руб.</button>
+				<a href="#">9 900 руб.</a>
 			</div>
 			<div class="catalog-item">
+				<div class="title">
+					<div class="title-btn"></div>
+					<div class="title-btn"></div>
+					<div class="title-btn"></div>
+				</div>
+			</div>
+				<div class="body">
 				<img src="img/img-pink.jpg" alt="Pink">
 			</div>
 			<div class="catalog-item">
+				<div class="title">
+			        <div class="title-btn"></div>
+						<div class="title-btn"></div>
+						<div class="title-btn"></div>
+					</div>
+				</div>
+				<div class="body">
 				<img src="img/img-barbershop.jpg" alt="Borodinski">
 			</div>
 			<div class="catalog-item">
+				<div class="title">
+					<div class="title-btn"></div>
+					<div class="title-btn"></div>
+					<div class="title-btn"></div>
+				</div>
+			</div>
+				<div class="body">
 				<img src="img/img-mishka.jpg" alt="Mishka">
 			</div>
 			<div class="catalog-item">
+				<div class="title">
+					<div class="title-btn"></div>
+					<div class="title-btn"></div>
+					<div class="title-btn"></div>
+				</div>
+			</div>
+				<div class="body">
 				<img src="img/img-aplus.jpg" alt="A plus">
 			</div>
 			<div class="catalog-item">
+				<div class="title">
+					<div class="title-btn"></div>
+					<div class="title-btn"></div>
+					<div class="title-btn"></div>
+				</div>
+			</div>
+			<div class="body">
 				<img src="img/img-kvast.jpg" alt="kvast">
 			</div>
 		</div>
 		<div class="paginator">
 			<ul>
 				<li>
-					<a href="#">1</a>
+					<a href="#" class="active">1</a>
 				</li>
 				<li>
 					<a href="#">2</a>
@@ -118,26 +169,30 @@
 				</li>
 			</ul>
 		</div>
-	</main>
-	<footer class="main-footer">
-     	<section class="footer-contacts">
-     		<h3>NЁRDS DESIGN STUDIO</h3>
+		<div class="location">
+			<div class="google-map">
+				<img src="img/Карта.jpg" alt="Карта">
+				<img src="img/map-marker.png" class="marker">
+			</div>
+		<div class="adress">
+			<h3>NЁRDS DESIGN STUDIO</h3>
      		191186, Санкт-Петербург,<br>
      		ул. Б. Конюшенная, д. 19/8<br>
      		тел. +7 (812) 275-75-75<br>
-     		<button>Напишите нам</button>
-     		<img src="img/Слой 2.jpg" alt="Карта">
-     		<img src="img/map-marker.jpg" class="marker">
-     	</section>
-     	<section class="footer-social">
-     		<a class="social-btn social-btn-vk" href="#"></a>
-			<a class="social-btn social-btn-fb" href="#"></a>
-			<a class="social-btn social-btn-inst" href="#"></a>
-     	</section>
-     	<section class="footer-copirite">
+     		<a href="#">Напишите нам</a>
+		</div>	
+		</div>
+	</main>
+	<footer>     		    		
+     	<div class="social">
+     		<a class="social-btn-vk" href="#"></a>
+			<a class="social-btn-fb" href="#"></a>
+			<a class="social-btn-inst" href="#"></a>
+     	</div>
+     	<div class="copirite">
      		<h3>Давайте дружить, это выгодно!</h3>
      		<p>Скидка 10% для друзей из социальных сетей.</p>
-     	</section>
-     </footer>
+     	</div>
+    </footer>
 </body>
 </html>
